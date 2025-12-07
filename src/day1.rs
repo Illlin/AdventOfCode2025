@@ -23,7 +23,7 @@ pub fn run(input: String) {
             count_b += new_pos/100;
         }
         if new_pos < 1 {
-            count_b += (-(new_pos)).div_euclid(100) + 1;
+            count_b += (-new_pos).div_euclid(100) + 1;
             if start_pos == 0 {
                 count_b -= 1;
             }
@@ -33,7 +33,6 @@ pub fn run(input: String) {
             // count_b += 1;
             count_a += 1;
         }
-        println!("instruction {instruction} pos {pos}  count {count_b}");
     }
     println!("Part 1a: {count_a}");
     println!("Part 1b: {count_b}");
